@@ -10,8 +10,7 @@ export const profile = {
   intro:
     "I work at the intersection of energy systems, sustainability analytics, and applied AI — building models that make power generation, materials, and supply chains measurably cleaner. My work spans solar forecasting with deep learning, life-cycle and circular-economy modeling, and agentic AI pipelines for corporate sustainability disclosures.",
   location: "Ann Arbor, Michigan",
-  /** Swap this for a real photo: put a file in src/assets and import it here. */
-  photoUrl: "" as string,
+  photoUrl: "/ray-zhong.jpg",
   resumeUrl: "/Ray_Zhong_Resume.pdf",
   email: "rayzhong@umich.edu",
   altEmail: "ray3yu2he@gmail.com",
