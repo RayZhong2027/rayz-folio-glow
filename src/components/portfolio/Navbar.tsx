@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, FileDown } from "lucide-react";
 import { navLinks, profile } from "@/data/portfolioData";
 import { cn } from "@/lib/utils";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
@@ -45,6 +46,7 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <a
             href={profile.resumeUrl}
             className="hidden items-center gap-2 rounded-full bg-foreground px-4 py-1.5 text-sm font-medium text-background transition-opacity hover:opacity-85 sm:inline-flex"
@@ -78,6 +80,12 @@ export function Navbar() {
                 </a>
               </li>
             ))}
+            <li className="mt-2 flex items-center justify-between border-t border-border px-4 py-2.5">
+              <span className="text-xs font-mono uppercase tracking-[0.14em] text-muted-foreground">
+                Theme
+              </span>
+              <ThemeToggle showLabel />
+            </li>
             <li>
               <a
                 href={profile.resumeUrl}
