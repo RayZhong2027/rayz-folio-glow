@@ -15,14 +15,16 @@ export function About() {
           <article
             key={card.title}
             className={cn(
-              "rounded-3xl border border-border bg-card p-6 transition-colors hover:bg-surface",
+              "rounded-3xl border border-border bg-card p-6 transition-all duration-300 hover:border-accent/40 hover:bg-surface/70 hover:shadow-lg hover:shadow-accent/5",
               card.span,
             )}
           >
-            <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-accent">
+            <p className="font-mono text-[11px] font-semibold uppercase tracking-[0.2em] text-accent">
               {card.kicker}
             </p>
-            <h3 className="mt-3 text-lg font-medium tracking-tight text-foreground">{card.title}</h3>
+            <h3 className="mt-3 font-display font-bold text-lg tracking-tight text-foreground">
+              {card.title}
+            </h3>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{card.body}</p>
           </article>
         ))}

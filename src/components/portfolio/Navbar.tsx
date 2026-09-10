@@ -26,10 +26,10 @@ export function Navbar() {
       >
         <a
           href="#top"
-          className="flex items-center gap-2 rounded-full bg-surface px-3 py-1.5 text-sm font-semibold tracking-tight text-foreground"
+          className="flex items-center gap-2 rounded-full border border-border/60 bg-surface px-3 py-1.5 text-sm font-semibold tracking-tight text-foreground transition-all hover:border-accent/40"
         >
-          <span className="font-display text-accent">{profile.initials}</span>
-          <span className="hidden sm:inline">{profile.name}</span>
+          <span className="font-display font-bold text-accent">{profile.initials}</span>
+          <span className="hidden font-display sm:inline">{profile.name}</span>
         </a>
 
         <ul className="hidden items-center gap-1 md:flex">
@@ -37,7 +37,7 @@ export function Navbar() {
             <li key={l.href}>
               <a
                 href={l.href}
-                className="rounded-full px-3 py-1.5 text-sm text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
+                className="rounded-full px-3 py-1.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-surface hover:text-foreground"
               >
                 {l.label}
               </a>
@@ -49,7 +49,7 @@ export function Navbar() {
           <ThemeToggle />
           <a
             href={profile.resumeUrl}
-            className="hidden items-center gap-2 rounded-full bg-foreground px-4 py-1.5 text-sm font-medium text-background transition-opacity hover:opacity-85 sm:inline-flex"
+            className="hidden items-center gap-2 rounded-full bg-primary px-4 py-1.5 text-sm font-semibold text-primary-foreground shadow-sm transition-transform duration-200 hover:scale-[1.02] active:scale-95 sm:inline-flex"
           >
             <FileDown className="size-4" aria-hidden="true" />
             Resume
